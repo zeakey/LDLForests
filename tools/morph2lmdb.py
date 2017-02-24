@@ -1,4 +1,5 @@
-import sys, Image, argparse, scipy, lmdb, shutil, hashlib
+import sys, argparse, scipy, lmdb, shutil, hashlib
+from PIL import Image
 from collections import OrderedDict
 sys.path.append('caffe-ldl/python')
 import caffe
@@ -31,7 +32,7 @@ def make_label(label_value):
   label_value = label_value - min_age
   label_distr = np.zeros([(max_age - min_age + 1)])
   mid = np.ceil((max_age - min_age + 1) / 2)
-  shift = label_value - mid
+  shift = int(label_value - mid)
   if shift > 0:
     label_distr[shift:] = gaussian[0:-shift]
   elif shift == 0:
@@ -90,6 +91,8 @@ if __name__ == '__main__':
   with open(abspath(join(base_dir, 'Ratio'+str(args.ratio),'db.info')), 'w') as db_info:
     db_info.write("Morph dataset LMDB info: TrainSet ratio=%f \n"%(args.ratio))
     db_info.write("nTrain=%d, nTest=%d, minAge=%d, maxAge=%d, meanAge=%f"%(NTrain, NTest, min_age, max_age, mean_age))
+  if not isdir("data"):
+    os.makedirs("data")
   if not isdir("data/MorphDB"):
     os.symlink(base_dir, "data/MorphDB")
     print "Make data symbol link at 'data/MorphDB'."
