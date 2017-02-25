@@ -54,7 +54,7 @@ def make_net(phase='train'):
     batch_size = test_batch_size
   if phase != 'deploy':
     n.data = L.Data(source=join(data_source, phase+'-img'), backend=P.Data.LMDB, batch_size=batch_size,
-                    transform_param=dict(mean_file="experiments/mean.binaryproto",crop_size=227), ntop=1)
+                    transform_param=dict(mean_value=112,crop_size=227), ntop=1)
     n.label = L.Data(source=join(data_source, phase+'-age'), backend=P.Data.LMDB, batch_size=batch_size, ntop=1)
   else:
     n.data = L.Input(shape=dict(dim=[1,3,256,256]))
