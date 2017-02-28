@@ -168,6 +168,7 @@ if __name__ == '__main__':
   for p in solver.net.params:
     param = solver.net.params[p][0].data[...]
     print "  layer \"%s\":, parameter[0] mean=%f, std=%f"%(p, param.mean(), param.std())
+  print args
   raw_input("Press Enter to continue...")
   while iter < maxIter:
     solver.step(test_interval)
@@ -192,4 +193,6 @@ if __name__ == '__main__':
   plt.savefig(sav_fn+'.eps')
   plt.savefig(sav_fn+'.png')
   plt.savefig(sav_fn+'.svg')
+  print args
+  print "Best MAE=%.4f."%mae.min()
   print "Done! Results saved at \'"+sav_fn+"\'"
