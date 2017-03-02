@@ -7,6 +7,7 @@ Code accompanying the paper **Label Distribution Learning Forest**. [[**arXiv**]
 ```bash
 git clone https://github.com/zeakey/LDLForest --recursive
 cd LDLForest/caffe-ldl
+cp Makefile.config.example Makefile.config
 make -j$(nproc) && make pycaffe && cd ..
 ```
 
