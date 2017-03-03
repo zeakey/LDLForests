@@ -1,1 +1,10 @@
 theme: jekyll-theme-cayman
+google_analytics: UA-85178162-1
+
+title: LDL-Forest
+tagline: Label Distribution Learning Forest
+
+author:
+  name: Zhao Kai
+  url:  http://zhaok.xyz
+
