@@ -47,3 +47,6 @@ make -j$(nproc) && make pycaffe && cd ..
 
 A [live demo](https://github.com/zeakey/LDLForest/blob/master/demo.ipynb).
 
+**Visit the [project page](http://kaiz.xyz/ldlf) for pretrained models and more detailed information.**
+
+
