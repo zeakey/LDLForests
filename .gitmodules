@@ -1,0 +1,3 @@
+[submodule "caffe-ldl"]
+	path = caffe-ldl
+	url = https://github.com/zeakey/caffe-ldl
