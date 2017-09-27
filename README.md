@@ -1,6 +1,6 @@
 # Label Distribution Learning Forest
 ## Publication
-Code accompanying the paper **Label Distribution Learning Forest**. [[**arXiv**]](https://arxiv.org/abs/1702.06086)  [[**ProjectPage**]](http://zhaok.xyz/ldlf)
+Code accompanying the paper **Label Distribution Learning Forest**. [[**arXiv**]](https://arxiv.org/abs/1702.06086)  [[**ProjectPage**]](http://kaiz.xyz/ldlf)
 
 **If you use our code, please consider citing following paper**:
 
